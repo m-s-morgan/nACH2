@@ -1,43 +1,46 @@
 {
   "name": "nach",
-  "description": "nACH is a highly customizable Node.js module exposing a high & low-level API for generating ACH files for use within the ACH network",
-  "version": "0.3.5",
+  "description": "nACH is a highly customizable Node.js module exposing a high & low-level API for generating ACH files for use within the ACH network (ProFit fork of nach@0.3.5: lodash 4 and async 3, same output)",
+  "version": "0.3.6",
   "author": "The Zipline Labs team",
   "keywords": [
     "ACH",
     "file",
     "Automated Clearing House"
   ],
-  "contributors": [{
-    "name": "Glen Selle", 
-    "email": "glen@zipline.co"
-  },
-  {
-    "name": "Tom Horner", 
-    "email": "tom.horner@zipline.co"
-  },
-  {
-    "name": "Yaw Joseph Etse", 
-    "email": "yaw.etse@gmail.com", 
-    "url": "http://about.me/yawjosephetse"
-  }],
+  "contributors": [
+    {
+      "name": "Glen Selle",
+      "email": "glen@zipline.co"
+    },
+    {
+      "name": "Tom Horner",
+      "email": "tom.horner@zipline.co"
+    },
+    {
+      "name": "Yaw Joseph Etse",
+      "email": "yaw.etse@gmail.com",
+      "url": "http://about.me/yawjosephetse"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/zipline/nACH.git"
+    "url": "git+https://github.com/m-s-morgan/nACH2.git"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">=22"
   },
   "scripts": {
-    "test": "NODE_ENV=test ./node_modules/.bin/mocha --reporter spec --recursive"
+    "test": "mocha && node test/fixtures/compare.js"
   },
   "dependencies": {
-    "moment": "2.x.x",
-    "lodash": "3.x.x",
-    "async": "0.9.x"
+    "moment": "^2.31.0",
+    "lodash": "^4.18.1",
+    "async": "^3.2.6"
   },
   "devDependencies": {
-    "mocha": "latest",
-    "chai": "latest"
-  }
+    "chai": "^6.3.0",
+    "mocha": "^12.0.3"
+  },
+  "license": "MIT"
 }

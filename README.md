@@ -1,3 +1,14 @@
+> **ProFit fork.** `nach@0.3.5` (zipline/nACH, MIT) with only its dependencies brought up to date for current
+> Node.js: lodash 3 → 4 (`_.contains` → `_.includes`, removing lodash 3's critical advisories), async 0.9 → 3,
+> moment 2.31; `engines` `node >=22`. The ACH output is unchanged: `npm test` runs the original suite and
+> `test/fixtures/compare.js`, which checks complete files, records, validation errors and utils byte for byte
+> against output recorded from the published 0.3.5 (`test/fixtures/nach-0.3.5.json`, from `generate.js`).
+> The later upstream line (`nach2` 0.4+) changes generation behavior and is not carried here.
+>
+> ```bash
+> npm install github:m-s-morgan/nACH2#v0.3.6
+> ```
+
 # nACH
 
 [![NPM Version](https://badge.fury.io/js/nach.svg)](http://badge.fury.io/js/nach)
